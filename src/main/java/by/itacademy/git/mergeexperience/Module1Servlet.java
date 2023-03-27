@@ -28,7 +28,7 @@ public class Module1Servlet extends HttpServlet {
                     + value.getOrder() + "</td><td>"
                     + value.getTopic() + "</td><td>"
                     + value.getDesc()
-                    + "</td><td><a href='not_implemented_yet.html'>Подробнее</a>"
+                    + "</td><td><a href='" + getModuleUrl(value.getTopic()) + "'>Подробнее</a>"
                     + "</td></tr>");
 
         out.println("</table>");
@@ -38,5 +38,21 @@ public class Module1Servlet extends HttpServlet {
     }
 
     public void destroy() {
+    }
+
+    /**
+     * Возвращает ссылку на которую переходить по нажатию на ссылку Подробнее
+     *
+     * @param topic Название темы
+     * @return Ссылку для перехода
+     */
+    private String getModuleUrl(String topic) {
+        if (topic.equals("Jakarta")) {
+            return "https://jakarta.ee/";
+        } else if (topic.equals("Apache Maven")) {
+            return "https://maven.apache.org/";
+        } else {
+            return "not_implemented_yet.html";
+        }
     }
 }
