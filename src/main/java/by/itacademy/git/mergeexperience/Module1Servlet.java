@@ -31,8 +31,21 @@ public class Module1Servlet extends HttpServlet {
                         + value.getDesc()
                         + "</td><td><a href='https://prezi.com/view/ROBl3h39RTxz7DdBkRza/'>Подробнее</a>"
                         + "</td></tr>");
-            }
-            else {
+            } else if (value.getTopic().equals("Jakarta")) {
+                out.println("<tr><td>"
+                        + value.getOrder() + "</td><td>"
+                        + value.getTopic() + "</td><td>"
+                        + value.getDesc()
+                        + "</td><td><a href='https://jakarta.ee/'>Подробнее</a>"
+                        + "</td></tr>");
+            } else if (value.getTopic().equals("Apache Maven")) {
+                out.println("<tr><td>"
+                        + value.getOrder() + "</td><td>"
+                        + value.getTopic() + "</td><td>"
+                        + value.getDesc()
+                        + "</td><td><a href='https://maven.apache.org/'>Подробнее</a>"
+                        + "</td></tr>");
+            } else {
                 out.println("<tr><td>"
                         + value.getOrder() + "</td><td>"
                         + value.getTopic() + "</td><td>"
@@ -49,21 +62,5 @@ public class Module1Servlet extends HttpServlet {
     }
 
     public void destroy() {
-    }
-
-    /**
-     * Возвращает ссылку на которую переходить по нажатию на ссылку Подробнее
-     *
-     * @param topic Название темы
-     * @return Ссылку для перехода
-     */
-    private String getModuleUrl(String topic) {
-        if (topic.equals("Jakarta")) {
-            return "https://jakarta.ee/";
-        } else if (topic.equals("Apache Maven")) {
-            return "https://maven.apache.org/";
-        } else {
-            return "not_implemented_yet.html";
-        }
     }
 }
