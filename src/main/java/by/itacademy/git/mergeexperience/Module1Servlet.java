@@ -1,12 +1,8 @@
 package by.itacademy.git.mergeexperience;
 
 import java.io.*;
-import java.util.List;
 
 import by.itacademy.git.mergeexperience.topics.Module1Topics;
-import by.kozlov.usefulTables.Link;
-import by.kozlov.usefulTables.Modules;
-import by.kozlov.usefulTables.Theme;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
@@ -39,8 +35,8 @@ public class Module1Servlet extends HttpServlet {
 
         out.println("<body>");
         out.println("<h1>" + message + "</h1>");
+
         out.println("<table>");
-        out.println("<caption>Модуль 1</caption>");
         for (Module1Topics value : Module1Topics.values())
             if (value.getTopic().equals("GIT")) {
                 out.println("<tr><td>"
