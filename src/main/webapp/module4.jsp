@@ -12,40 +12,40 @@
 
 <table border="1">
     <tr>
-        <th>Номер темы</th>
-        <th>Тема</th>
-        <th>Описание</th>
+        <th><font size=“5” />Номер темы</th>
+        <th> <font size=“5” /> Тема</th>
+        <th> <font size=“5” /> Описание</th>
     </tr>
     <tr>
-        <td><%=SPRING_BEANS.getOrder()%>
+        <td><font size=“4” color=“#000080” /> <%=SPRING_BEANS.getOrder()%>
         </td>
-        <td><%=SPRING_BEANS.getTopic()%>
+        <td> <font size=“4” color=“#0000CD” /> <%=SPRING_BEANS.getTopic()%>
         </td>
-        <td><%=SPRING_BEANS.getDescription()%>
-        </td>
-    </tr>
-    <tr>
-        <td><%=SPRING_DATA.getOrder()%>
-        </td>
-        <td><%=SPRING_DATA.getTopic()%>
-        </td>
-        <td><%=SPRING_DATA.getDescription()%>
+        <td> <font size=“4” color=“#4682B4” /> <%=SPRING_BEANS.getDescription()%>
         </td>
     </tr>
     <tr>
-        <td><%=SPRING_SECURITY.getOrder()%>
+        <td> <font size=“4” color=“#000080” /> <%=SPRING_DATA.getOrder()%>
         </td>
-        <td><%=SPRING_SECURITY.getTopic()%>
+        <td> <font size=“4” color=“#0000CD” /> <%=SPRING_DATA.getTopic()%>
         </td>
-        <td><%=SPRING_SECURITY.getDescription()%>
+        <td> <font size=“4” color=“#4682B4” /> <%=SPRING_DATA.getDescription()%>
         </td>
     </tr>
     <tr>
-        <td><%=SPRING_BOOT.getOrder()%>
+        <td> <font size=“4” color=“#000080” /> <%=SPRING_SECURITY.getOrder()%>
         </td>
-        <td><%=SPRING_BOOT.getTopic()%>
+        <td> <font size=“4” color=“#0000CD” /> <%=SPRING_SECURITY.getTopic()%>
         </td>
-        <td><%=SPRING_BOOT.getDescription()%>
+        <td> <font size=“4” color=“#4682B4” /> <%=SPRING_SECURITY.getDescription()%>
+        </td>
+    </tr>
+    <tr>
+        <td> <font size=“4” color=“#000080” /> <%=SPRING_BOOT.getOrder()%>
+        </td>
+        <td> <font size=“4” color=“#0000CD” /> <%=SPRING_BOOT.getTopic()%>
+        </td>
+        <td> <font size=“4” color=“#4682B4” /> <%=SPRING_BOOT.getDescription()%>
         </td>
     </tr>
 </table>
