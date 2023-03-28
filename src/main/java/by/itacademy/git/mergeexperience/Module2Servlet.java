@@ -26,17 +26,13 @@ public class Module2Servlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
         out.println("<h1>" + message + "</h1>");
-        out.println("<table>");
-        out.println("<caption>Модуль 2</caption>");
         for (Module2Topics value : Module2Topics.values())
             out.println("<tr><td>"
                     + value.getOrder() + "</td><td>"
                     + value.getTopic() + "</td><td>"
-                    + value.getDesc() + "</td><td>"
-                    + value.getHours()
+                    + value.getDesc()
                     + "</td><td><a href='not_implemented_yet.html'>Подробнее</a>"
                     + "</td></tr>");
-        out.println("</table>");
         out.println("</br><a href=\"/module1\">&#8592Предыдущий модуль</a>");
         out.println("</br><a href=\"/module3\">Следующий модуль&#8594</a>");
         out.println("</br><a href='/'>Назад</a>");
