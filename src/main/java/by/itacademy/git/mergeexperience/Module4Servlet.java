@@ -1,5 +1,7 @@
 package by.itacademy.git.mergeexperience;
 
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -10,22 +12,13 @@ import java.io.PrintWriter;
 
 @WebServlet("/module4")
 public class Module4Servlet extends HttpServlet {
-    private String message;
 
     public void init() {
-        message = "Модуль 4";
     }
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
-
-        // Hello
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
-        out.println("</br><a href=\"/module3\">&#8592Предыдущий модуль</a>");
-        out.println("</br><a href='/'>Назад</a>");
-        out.println("</body></html>");
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("module4.jsp");
+        dispatcher.forward(request, response);
     }
 
     public void destroy() {
