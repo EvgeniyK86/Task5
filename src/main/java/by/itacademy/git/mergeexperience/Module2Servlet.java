@@ -43,11 +43,13 @@ public class Module2Servlet extends HttpServlet {
 
         out.println("<body>");
         out.println("<h1>" + message + "</h1>");
+        out.println("<caption>Модуль 2</caption>");
         for (Module2Topics value : Module2Topics.values())
             out.println("<tr><td>"
                     + value.getOrder() + "</td><td>"
                     + value.getTopic() + "</td><td>"
-                    + value.getDesc()
+                    + value.getDesc()   + "</td><td>"
+                    + value.getHours()
                     + "</td><td><a href='not_implemented_yet.html'>Подробнее</a>"
                     + "</td></tr>");
 
