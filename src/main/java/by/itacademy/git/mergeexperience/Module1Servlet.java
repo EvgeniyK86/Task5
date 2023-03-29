@@ -25,17 +25,17 @@ public class Module1Servlet extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         //by Kozlov
-        out.println("<head><style>");
-        String headStyle = "table.myTable,table.myTable th,table.myTable tr,table.myTable td{ width: 450px;" +
+        String tableStyle = "table.myTable,table.myTable th,table.myTable tr,table.myTable td{ width: 450px;" +
                 "height:30px;" + "border: solid 1px silver;" +
                 "text-align:center;" + "border-collapse: collapse;}";
-        out.println("</style></head>");
-
         List<Theme> listModuleOne = Modules.MODULE1.getThemesOfModule(); //by Kozlov
 
         out.println("<html>");
 
-        out.println(headStyle);//by Kozlov
+        //by Kozlov
+        out.println("<head><style>");
+        out.println(tableStyle);
+        out.println("</style></head>");//by Kozlov
 
         out.println("<body>");
         out.println("<h1>" + message + "</h1>");
