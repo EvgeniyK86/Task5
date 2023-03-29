@@ -9,8 +9,11 @@
         <module name="MergeExperience" />
       </profile>
     </annotationProcessing>
+<<<<<<< HEAD
     <bytecodeTargetLevel>
       <module name="MergeExperience" target="17" />
     </bytecodeTargetLevel>
+=======
+>>>>>>> PashaKozlov-feature
   </component>
 </project>
