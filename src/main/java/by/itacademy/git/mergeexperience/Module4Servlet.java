@@ -1,5 +1,9 @@
 package by.itacademy.git.mergeexperience;
 
+import by.itacademy.git.mergeexperience.topics.Module4Topics;
+import by.kozlov.usefulTables.Link;
+import by.kozlov.usefulTables.Modules;
+import by.kozlov.usefulTables.Theme;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -7,6 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 @WebServlet("/module4")
 public class Module4Servlet extends HttpServlet {
@@ -37,6 +42,27 @@ public class Module4Servlet extends HttpServlet {
 
         out.println("<body>");
         out.println("<h1>" + message + "</h1>");
+
+        //by Nazar
+        List<Module4Topics> topics = List.of(Module4Topics.values());
+
+        out.println("<table border=\"1\">");
+        out.println("<tr> <th>Номер темы</th> <th>Тема</th> <th>Описание</th> </tr>");
+        for (Module4Topics topic : topics) {
+            out.println("<tr>");
+            out.println("<td>");
+            out.println(topic.getOrder());
+            out.println("</td>");
+            out.println("<td>");
+            out.println(topic.getTopic());
+            out.println("</td>");
+            out.println("<td>");
+            out.println(topic.getDescription());
+            out.println("</td>");
+            out.println("</tr>");
+        }
+        out.println("</table>");
+
 
         //by Kozlov
         out.println("<br><br><table class = \"myTable\"><caption><b>Useful links on topics</b></caption>");
